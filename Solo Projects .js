@@ -5,7 +5,7 @@ var productsData = [
     { name: "White Chocolate", price: 4.49, image: "c:\Users\hibaz\Desktop\RBK\Solo-Projects- Hybaa\photo\emy-Rx3QSrG1coc-unsplash.jpg" }
 ];
 
-// Function to create a product card element
+
 function createProductCard(imageSrc, productName, price) {
     var productGrid = document.querySelector('.product-grid');
 
@@ -30,10 +30,10 @@ function createProductCard(imageSrc, productName, price) {
     productGrid.appendChild(card);
   }
 
-  // Example usage:
+  
   
 
-// Call the displayProducts function when the page loads
+
 $(document).ready(function() {
     displayProducts();
 });
