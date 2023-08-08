@@ -9,10 +9,11 @@ body, h1, h2, h3, p, ul, li {
     color: #333;
     line-height: 1.6;
   }
-#logo{
-    max-width: 50%;
+  #logo {
+    max-width: 30%;
     position: left;
-}
+    width: 300px;
+  }
   
   header {
     background-color: #5c2d0e;
@@ -204,3 +205,20 @@ z-index: 1;
       padding: 10px;
     }
   }
+  .book-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5c2d0e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .book-button:hover {
+    background-color: #843c18;
+    transform: scale(1.05);
+  }
+  
