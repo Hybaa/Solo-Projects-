@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Varon Chocolat</title>
+  <style>
+    /* Reset some default styles */
+    body, h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #5c2d0e;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 48px;
+      color: #f7f7f7;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    /* Navigation styles */
+    nav {
+      background-color: #843c18;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #f7f7f7;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 18px;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffc107;
+    }
+    #imagebackground
+
+    /* Banner styles */
+    .banner {
+  background-color: #020101;
+  color: #f7f7f7;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+}
+.banner img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.product-card {
+  /* ... other styles ... */
+  position: relative; /* Ensure positioning for the overlay */
+}
+
+.product-image {
+  /* ... image styles ... */
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.1); /* Increase the size on hover */
+}
+
+.product-image::after {
+  content: ""; /* Create an overlay for the hover effect */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Ensure the overlay doesn't block interaction */
+}
+
+.product-card:hover .product-image::after {
+  opacity: 1; /* Show the overlay on hover */
+}
+    /* Main content styles */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .background-image-container {
+  position: relative;
+  width: 300px; /* Set the width as needed */
+  height: 200px; /* Set the height as needed */
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('path_to_initial_image.jpg'); /* Set the initial background image */
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.3s ease;
+}
+
+.background-image:hover {
+  opacity: 0; /* Hide the initial image on hover */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Place the content above the background image */
+  /* Other content styles */
+}
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #5c2d0e;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    /* Product grid styles */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      border: 1px solid #e1e1e1;
+      padding: 20px;
+      text-align: center;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .product-card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #5c2d0e;
+    }
+
+    .product-card p {
+      font-size: 18px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #5c2d0e;
+      color: #f7f7f7;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 36px;
+      }
+
+      .banner {
+        height: 20px;
+        font-size: 20px;
+
+      }
+
+      .product-card {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Varon Chocolat</h1>
+  </header>
+  
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="banner">
+    <img src="c:\Users\hibaz\Desktop\RBK\Solo-Projects- Hybaa\photo\jessica-loaiza-DHYfjAe_eeo-unsplash.jpg" alt="Chocolicious Banner">
+    Welcome to our Chocolate Shop!
+  
+</div>
+  <div class="product-card">
+    <img class="product-image" src="c:\Users\hibaz\Desktop\RBK\Solo-Projects- Hybaa\photo\chocolate-banner.jpg" alt="Chocolate Product 1">
+    <h3>Chocolate With Almond</h3>
+    <p>$9.99</p>
+  </div>
+  <div class="product-card">
+    <img class="product-image" src="c:\Users\hibaz\Desktop\RBK\Solo-Projects- Hybaa\photo\american-heritage-chocolate-TZFshUFzWRQ-unsplash.jpg" alt="Chocolate Product 2">
+    <h3>White Chocolate With Almonds</h3>
+    <p>$9.99</p>
+  </div>
+  <div class="product-grid">
+    <!-- Product cards will be added here using JavaScript -->
+  </div>
+  
+  <div class="background-image-container">
+    <div class="background-image"></div>
+    <div class="content">
+      <!-- Your content goes here -->
+    </div>
+  </div>
+  
+  <div class="container">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="c:\Users\hibaz\Desktop\RBK\Solo-Projects- Hybaa\photo\pushpak-dsilva-r-hQw_obFd0-unsplash.jpg" alt="Chocolate Product 1">
+        <h3>Chocolate With Almond</h3>
+        <p>$9.99</p>
+      </div>
+      <div class="product-card">
+        <img src="c:\Users\hibaz\Desktop\RBK\Solo-Projects- Hybaa\photo\emy-Rx3QSrG1coc-unsplash.jpg" alt="Chocolate Product 1">
+        <h3>White Chocolate With Almonds</h3>
+        <p>$9.99</p>
+      </div>
+      <div class="product-card">
+        <img src="c:\Users\hibaz\Desktop\RBK\Solo-Projects- Hybaa\photo\hakuna-matata-M-ZekXI8eE0-unsplash.jpg" alt="Chocolate Product 1">
+        <h3>Chocolate With Raspberry</h3>
+        <p>$9.99</p>
+      </div>
+      <div class="product-card">
+        <img src="c:\Users\hibaz\Desktop\RBK\Solo-Projects- Hybaa\photo\julia-zyablova-EwaJbJvS9io-unsplash.jpg">
+        <h3>Stack Of Milk & White Chocolate With Nuts & Toppings</h3>
+        <p>$9.99</p>
+      </div>
+      <div class="product-card">
+        <img src="c:\Users\hibaz\Desktop\RBK\Solo-Projects- Hybaa\photo\sara-cervera-we4l7ch6iwc-unsplash.jpg" alt="Chocolate Product 1">
+        <h3>Heart Chocolates</h3>
+        <p>$9.99</p>
+      </div>
+      <div class="product-card">
+        <img src="c:\Users\hibaz\Desktop\RBK\Solo-Projects- Hybaa\photo\pushpak-dsilva-r-hQw_obFd0-unsplash.jpg" alt="Chocolate Product 1">
+        <h3>Coconut & Dark Chocolate Treat</h3>
+        <p>$9.99</p>
+      </div>
+      <div class="product-card">
+        <img src="c:\Users\hibaz\Desktop\RBK\Solo-Projects- Hybaa\photo\pushpak-dsilva-r-hQw_obFd0-unsplash.jpg" alt="Chocolate Product 1">
+        <h3>Delicious Dark Chocolate</h3>
+        <p>$9.99</p>
+      </div>
+      <div class="product-card">
+        <img src="c:\Users\hibaz\Desktop\RBK\Solo-Projects- Hybaa\photo\pushpak-dsilva-r-hQw_obFd0-unsplash.jpg" alt="Chocolate Product 1">
+        <h3>Delicious Dark Chocolate</h3>
+        <p>$9.99</p>
+      </div>
+      <div class="product-card">
+        <img src="c:\Users\hibaz\Desktop\RBK\Solo-Projects- Hybaa\photo\pushpak-dsilva-r-hQw_obFd0-unsplash.jpg" alt="Chocolate Product 1">
+        <h3>Delicious Dark Chocolate</h3>
+        <p>$9.99</p>
+      </div>
+      <div class="product-card">
+        <img src="c:\Users\hibaz\Desktop\RBK\Solo-Projects- Hybaa\photo\egor-lyfar-DPNrBT1WCMs-unsplash.jpg" alt="Chocolate Product 1">
+        <h3>Delicious Dark Chocolate</h3>
+        <p>$9.99</p>
+      </div>
+      <div class="product-card">
+        <img src="c:\Users\hibaz\Desktop\RBK\Solo-Projects- Hybaa\photo\chocolate-product2.jpg" alt="Chocolate Product 2">
+        <h3>Christmas Chocolates</h3>
+        <p>$9.99</p>
+      </div>
+      <!-- Add more product cards here -->
+    </div>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>
+      If you have any questions or inquiries, feel free to reach out to us. Our dedicated team is here to 
+      assist you.
+    </p>
+    <p>
+      Phone: +216 58 057 094
+    </p>
+    <p>
+      Email: hibazoglami2018@gmail.com
+    </p>
+    <p>
+      Address: Mall Of Sousse
+    </p>
+  </div>
+  
+  
+  
+  <footer>
+    <p>Varon Chocolate</p>
+  </footer>
+</body>
+</html>
+product-card
+product-name
+product-image
+product-price
+background-image
